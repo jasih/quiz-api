@@ -22,6 +22,8 @@ public class Answer {
 
   private boolean correct = false;
 
+  private boolean deleted;
+  
   @ManyToOne
   @JoinColumn(name = "question_id")
   private Question question;

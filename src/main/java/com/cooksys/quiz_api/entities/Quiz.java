@@ -15,13 +15,15 @@ import lombok.NoArgsConstructor;
 @Data
 public class Quiz {
 
-  @Id
-  @GeneratedValue
-  private Long id;
+	@Id
+	@GeneratedValue
+	private Long id;
 
-  private String name;
+	private String name;
 
-  @OneToMany(mappedBy = "quiz")
-  private List<Question> questions;
+	private boolean deleted;
+
+	@OneToMany(mappedBy = "quiz")
+	private List<Question> questions;
 
 }
